@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fonticon -->
+    <link rel="icon" type="image/png" href="assets/images/fonticon.png">
+    <!-- Css -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="assets/css/font-awesome.css">
+    <!-- font-family -->
+    <link rel="stylesheet" href="assets/css/stylesheet.css">
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <title>Book Your</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark text-white">
+            <div class="container fs-5">
+                <a class="navbar-brand text-white me-5" href="#">My<i class="fa fa-ticket" aria-hidden="true"></i>Show</a>
+                <div>
+                    <ul class="navbar-nav">
+                        <li class="nav-item me-2">
+                            <button class="buyButton" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                             id="signBtn">Sign Up
+                            </button>
+                            <button class="buyButton" id="logBtn" onclick="logOutBtns()">
+                                Log Out
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </nav>
+    </header>
+    <!-- modal for sign up -->
+    <section>
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Sign Up</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-black">
+                        <div class="container ">
+                            <div class="singnUpSection">
+                                <form id="signupForm">
+                                    <div class="mb-3">
+                                        <label for="userName" class="form-label">Full Name:</label>
+                                        <input type="text" class="form-control" id="userName"
+                                            placeholder="Enter Your Full Name" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="userEmail" class="form-label">Email address:</label>
+                                        <input type="email" class="form-control" id="userEmail"
+                                            placeholder="Enter Your Email" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="userPassword" class="form-label">Password:</label>
+                                        <input type="password" class="form-control" id="userPassword"
+                                            placeholder="Enter your Password"><div id="emailHelp" class="form-text">We'll never share your
+                                                password with anyone else.</div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="userConfirmPassword" class="form-label">Confirm
+                                            Password:</label>
+                                        <input type="password" class="form-control" id="userConfirmPassword"
+                                            placeholder="Enter your Confirm Password">
+                                    </div>
+                                    <div class="text-center mb-3">
+                                        <button type="submit" class="buyButton" data-bs-dismiss="modal"
+                                            aria-label="Close">Sign Up</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="buyButton" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- carousel for showing some movices -->
+    <section>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="assets/images/pushpa.jpg" class="d-block" alt="carouselImg">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/images/ghayal.jpg" class="d-block" alt="carouselImg">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/images/south.jpg" class="d-block" alt="carouselImg">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    <!-- lis of movices -->
+    <section>
+        <div class="container  pb-4">
+            <div class="row">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                        <div class="card h-80">
+                            <img src="assets/images/south.jpg" class="card-img-top" alt="gadarMovice">
+                            <div class="card-body">
+                                <h5 class="card-title">Shehzada</h5>
+                                <p class="card-text"><i class="fa fa-inr" aria-hidden="true"></i> 200</p>
+    
+                                <a href="./tickets.html"><button class="buyButton">Buy Tickets</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-80">
+                            <img src="assets/images/tu-jhoothi-main-makkaar-et00347237-1675065103.avif"
+                                class="card-img-top" alt="adipurushMovice">
+                            <div class="card-body">
+                                <h5 class="card-title">Tu Jhoothi Main Makkaar</h5>
+                                <p class="card-text"><i class="fa fa-inr" aria-hidden="true"></i> 200</p>
+                                <a href="./tickets.html"><button class="buyButton">Buy Tickets</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-80">
+                            <img src="assets/images/AAA.jpg" class="card-img-top" alt="bholaagadarMovice">
+                            <div class="card-body">
+                                <h5 class="card-title">Chor Nikal Ke Bhaga</h5>
+                                <p class="card-text"><i class="fa fa-inr" aria-hidden="true"></i> 200</p>
+                                <a href="./tickets.html"><button class="buyButton">Buy Tickets</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- owlCarousel -->
+        <section class="owlCarousel">
+            <div class="owl-carousel owl-theme py-5">
+                <div class="item"><img src="assets/images/ghayal.jpg"></div>
+                <div class="item"><img src="assets/images/pushpa.jpg"></div>
+                <div class="item"><img src="assets/images/bholaa.jpg"></div>
+                <div class="item"><img src="assets/images/gadar.jpg"></div>
+                <div class="item"><img src="assets/images/Gulmohar-1200x900.webp"></div>
+                <div class="item"><img src="assets/images/mrs-chatterjee-16771327154x3.avif"></div>
+                <div class="item"><img src="assets/images/tu-jhoothi-main-makkaar-et00347237-1675065103.avif"></div>
+                <div class="item"><img src="assets/images/yiuo-1676619928.jpg"></div>
+                </div>
+        </section>     
+        <div class="container">
+            <div class="row">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                        <div class="card h-80">
+                            <img src="assets/images/gadar.jpg" class="card-img-top" alt="gadarMovice">
+                            <div class="card-body">
+                                <h5 class="card-title">Gadar 2: The Katha Continues</h5>
+                                <p class="card-text"><i class="fa fa-inr" aria-hidden="true"></i> 200</p>
+                                <a href="./tickets.html"><button class="buyButton">Buy Tickets</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-80">
+                            <img src="assets/images/adipurush.jpg" class="card-img-top" alt="adipurushMovice">
+                            <div class="card-body">
+                                <h5 class="card-title">Adipurush</h5>
+                                <p class="card-text"><i class="fa fa-inr" aria-hidden="true"></i> 200</p>
+                                <a href="./tickets.html"><button class="buyButton">Buy Tickets</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-80">
+                            <img src="assets/images/bholaa.jpg" class="card-img-top" alt="bholaagadarMovice">
+                            <div class="card-body">
+                                <h5 class="card-title">Bholaa</h5>
+                                <p class="card-text pb-2"><i class="fa fa-inr" aria-hidden="true"></i> 200</p>
+                                <a href="./tickets.html"><button class="buyButton">Buy Tickets</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container pb-3">
+            <div class="row">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                        <div class="card h-80">
+                            <img src="assets/images/mrs-chatterjee-16771327154x3.avif" class="card-img-top"
+                                alt="gadarMovice">
+                            <div class="card-body">
+                                <h5 class="card-title">Mrs Chatterjee vs Norway</h5>
+                                <p class="card-text"><i class="fa fa-inr" aria-hidden="true"></i> 200</p>
+                                <a href="./tickets.html"><button class="buyButton">Buy Tickets</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-80">
+                            <img src="assets/images/Gulmohar-1200x900.webp" class="card-img-top" alt="adipurushMovice">
+                            <div class="card-body">
+                                <h5 class="card-title">Gulmohar 2023</h5>
+                                <p class="card-text"><i class="fa fa-inr" aria-hidden="true"></i> 200</p>
+                                <a href="./tickets.html"><button class="buyButton">Buy Tickets</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer class="bg-dark text-lg-start text-white pt-3">
+        <div class="container">
+            <div class="row">
+                <p class="text-center">Copyright © 2022. All rights reserved.</p>
+            </div>
+          </div>
+        </footer>
+    <!-- owl carousel script -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/owl.carousel.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- bootstrap script -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- main script -->
+    <script src="assets/js/script.js"></script>
+    <!-- ticket js -->
+    <script src="assets/js/tickets.js"></script>
+</body>
+
+</html>

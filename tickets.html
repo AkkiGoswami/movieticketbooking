@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/tickets.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.css">
+    <title>Movie Seat Booking</title>
+  </head>
+  <body>
+    <div class="movie-container">
+      <h1 id="moviedemo"></h1>
+      <span id="movie"></span>
+      </select>
+    </div>
+
+    <ul class="showcase">
+      <li>
+        <div class="seat"></div>
+        <small>N/A</small>
+      </li>
+      <li>
+        <div class="seat selected"></div>
+        <small>Selected</small>
+      </li>
+      <li>
+        <div class="seat occupied"></div>
+        <small>Occupied</small>
+      </li>
+    </ul>
+    <div class="containerDiv">
+      <div class="screen"></div>
+      <div class="rowDiv">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+      <div class="rowDiv">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat occupied"></div>
+        <div class="seat occupied"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+
+      <div class="rowDiv">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat occupied"></div>
+        <div class="seat occupied"></div>
+      </div>
+
+      <div class="rowDiv">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+
+      <div class="rowDiv">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat occupied"></div>
+        <div class="seat occupied"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+
+      <div class="rowDiv">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat occupied"></div>
+        <div class="seat occupied"></div>
+        <div class="seat occupied"></div>
+        <div class="seat"></div>
+      </div>
+    </div>
+
+    <p class="text text-white">
+      You have selected <span id="count">0</span> seats for a price of Rs.<span id="total">0</span>
+    </p>
+  
+
+<!-- Button trigger modal -->
+<button onclick="addToCart()" 
+class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+<i class="fa fa-shopping-cart me-3" aria-hidden="true"></i>Book tickets
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <i class="fa fa-ticket fa-2x" aria-hidden="true"></i>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="cart">
+          <p id="userError"></p>
+          <p id="userName"></p>
+          <p id="totalSeat"></p>
+          <p id="seatPrice"></p>
+          <p id="totalPrice"></p>
+        </div>
+      </div>
+      <div class="modal-footer">
+      <button class="btn btn-secondary" data-bs-dismiss="modal" onclick="closeBtn()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    <script src="assets/js/tickets.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
